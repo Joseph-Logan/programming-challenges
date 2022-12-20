@@ -1,17 +1,5 @@
 import { describe, expect, it } from 'vitest'
-
-const wrapping = (gifts) => {
-  // if (!Array.isArray(gifts)) {
-  //   throw new Error('Gifts are not received or is not an array')
-  // }
-  return gifts.map((gift) => {
-    const wrap = '*'
-    const giftWrap = wrap.repeat(gift.length + 2)
-    const wrapAtTheCenter = `\n${wrap}${gift}${wrap}\n`
-
-    return `${giftWrap}${wrapAtTheCenter}${giftWrap}`
-  })
-}
+import { wrapping } from './wrapping-gifts'
 
 describe('Wrapping gifts', () => {
   it('should throw an error if wrapping is not a function', () => {
